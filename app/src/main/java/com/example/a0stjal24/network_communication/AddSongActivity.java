@@ -10,7 +10,7 @@ import android.widget.EditText;
 import java.io.IOException;
 import java.net.URL;
 
-public class AddSongActivity extends AppCompatActivity implements View.OnClickListener  {
+public class AddSongActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,11 +42,16 @@ public class AddSongActivity extends AppCompatActivity implements View.OnClickLi
         protected String doInBackground(String... params) {
             String postData = "songs=" + params[0] + "&artist=" + params[1] + "&years=" + params[2];
 
-            try{
+            try {
                 URL urlObject = new URL("bhttp://www.free-map.org.uk/course/mad/ws/addhit.php");
-            }
-            catch (IOException e) {
+            } catch (IOException e) {
                 return "Error";
+            }
+
+            return null;
         }
+
     }
+
 }
+
