@@ -24,7 +24,7 @@ public class DownloadActivity extends AppCompatActivity implements View.OnClickL
             HttpURLConnection conn = null;
             try
             {
-                URL url = new URL("http://www.free-map.org.uk/course/mad/ws/hits.php?artist=Oasis");
+                URL url = new URL("http://www.free-map.org.uk/course/mad/ws/hits.php?artist=Oasis&format=json");
                  conn = (HttpURLConnection) url.openConnection();
                 InputStream in = conn.getInputStream();
                 if(conn.getResponseCode() == 200)
